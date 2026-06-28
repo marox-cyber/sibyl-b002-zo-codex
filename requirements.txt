@@ -1,0 +1,2 @@
+sibyl-memory-cli==0.3.17
+sibyl-memory-mcp==0.1.11

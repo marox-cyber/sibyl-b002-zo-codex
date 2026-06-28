@@ -1,0 +1,2 @@
+[mcp_servers.sibyl_memory]
+command = "/home/workspace/Bounties/sibyl-b002-zo-codex/.venv/bin/sibyl-memory-mcp"

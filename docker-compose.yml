@@ -1,0 +1,23 @@
+services:
+  sibyl-memory-mcp:
+    build: .
+    image: sibyl-memory-zo-codex:local
+    stdin_open: true
+    tty: false
+    environment:
+      SIBYL_MEMORY_DB: /data/memory.db
+    volumes:
+      - sibyl-memory-data:/data
+
+  verify:
+    build: .
+    image: sibyl-memory-zo-codex:local
+    environment:
+      SIBYL_MCP_COMMAND: sibyl-memory-mcp
+      SIBYL_MEMORY_DB: /data/memory.db
+    volumes:
+      - sibyl-memory-data:/data
+    command: ["python", "/app/scripts/verify_mcp_stdio.py"]
+
+volumes:
+  sibyl-memory-data:

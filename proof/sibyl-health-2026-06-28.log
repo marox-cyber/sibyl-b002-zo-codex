@@ -1,0 +1,11 @@
+
+  ✓ All green.
+
+  schema_version   3
+  db_path          /home/workspace/Bounties/sibyl-b002-zo-codex/proof-memory.db
+  db_size_bytes    237568
+  tenant_id        00000000-0000-0000-0000-000000000001
+  hermes_bound     False
+  tier             free
+  email            None
+
