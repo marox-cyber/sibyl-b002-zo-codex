@@ -19,7 +19,8 @@ This folder verifies the Sibyl MCP server over stdio in a Zo/Codex-style local h
 ## Reproduce locally
 
 ```bash
-cd /home/workspace/Bounties/sibyl-b002-zo-codex
+git clone https://github.com/marox-cyber/sibyl-b002-zo-codex.git
+cd sibyl-b002-zo-codex
 python3.12 -m venv .venv
 .venv/bin/python -m pip install -U pip
 .venv/bin/python -m pip install -r requirements.txt
@@ -30,7 +31,8 @@ python3.12 -m venv .venv
 ## Reproduce with Docker Compose
 
 ```bash
-cd /home/workspace/Bounties/sibyl-b002-zo-codex
+git clone https://github.com/marox-cyber/sibyl-b002-zo-codex.git
+cd sibyl-b002-zo-codex
 docker compose build
 docker compose run --rm verify
 ```
