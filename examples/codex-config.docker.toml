@@ -1,3 +1,3 @@
 [mcp_servers.sibyl_memory]
 command = "docker"
-args = ["compose", "-f", "/absolute/path/to/sibyl-b002-zo-codex/docker-compose.yml", "run", "--rm", "sibyl-memory-mcp"]
+args = ["compose", "-f", "/absolute/path/to/sibyl-b002-zo-codex/docker-compose.yml", "run", "--rm", "-T", "sibyl-memory-mcp"]

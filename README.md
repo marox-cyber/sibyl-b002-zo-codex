@@ -59,10 +59,12 @@ Package install succeeded with:
 
 `scripts/verify_mcp_stdio.py` successfully called the MCP server and wrote/loaded a test entity from `proof-memory.db`.
 
-Docker is not available in the current Zo container, so the Docker files are scaffolded and statically checked here. The local stdio proof is verified end-to-end.
+Docker is not available inside the current Zo container, so the Docker files are included as a portable wrapper and statically checked here. The primary B002 submission is the verified Zo/Codex MCP stdio harness.
 
-## Next work
+## B002 fit
 
-- Add a clean public repo or gist.
-- Run the Docker Compose verification in an environment with Docker.
-- Claim `B002` in the Sibyl Discord after the proof package is polished.
+- Working build others can reproduce from this repo.
+- README includes setup steps.
+- Verification runs against the live `sibyl-memory-*` packages from PyPI, not a mock.
+- The repository is public for bounty review.
+- Primary surface: a clean Zo/Codex MCP stdio harness. Docker Compose is included as an additional portable wrapper.

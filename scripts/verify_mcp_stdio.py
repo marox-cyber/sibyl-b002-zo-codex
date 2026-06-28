@@ -12,10 +12,13 @@ DB = os.environ.get("SIBYL_MEMORY_DB", str(ROOT / "proof-memory.db"))
 
 
 async def main() -> None:
+    child_env = os.environ.copy()
+    child_env["SIBYL_MEMORY_DB"] = DB
+
     params = StdioServerParameters(
         command=SERVER,
         args=[],
-        env={"SIBYL_MEMORY_DB": DB},
+        env=child_env,
     )
 
     async with stdio_client(params) as (read, write):
@@ -24,6 +27,10 @@ async def main() -> None:
 
             tools = await session.list_tools()
             tool_names = [tool.name for tool in tools.tools]
+            expected = {"memory_remember", "memory_recall", "memory_search", "memory_list"}
+            missing = sorted(expected - set(tool_names))
+            if missing:
+                raise RuntimeError(f"missing expected tools: {missing}")
             print("TOOLS", tool_names)
 
             remember = await session.call_tool(
@@ -38,6 +45,8 @@ async def main() -> None:
                 },
             )
             print("REMEMBER", remember.content[0].text if remember.content else remember)
+            if remember.isError:
+                raise RuntimeError("memory_remember returned an MCP error")
 
             recall = await session.call_tool(
                 "memory_recall",
@@ -47,6 +56,8 @@ async def main() -> None:
                 },
             )
             print("RECALL", recall.content[0].text if recall.content else recall)
+            if recall.isError:
+                raise RuntimeError("memory_recall returned an MCP error")
 
 
 if __name__ == "__main__":
