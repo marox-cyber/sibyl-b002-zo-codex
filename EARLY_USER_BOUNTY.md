@@ -17,6 +17,20 @@ Screenshot requirement:
   - `memory_search`
 - Verified the generated memories are searchable with `sibyl memory search`.
 
+## Follow-up natural workload proof
+
+After reviewer feedback that the proof should reflect real plugin usage instead of only targeting the request count, an additional task-oriented workload was run:
+
+- Script: `scripts/run_natural_agent_workload.py`
+- Log: `proof/natural-agent-workload-2026-07-06T132810Z.log`
+- Workload: 10 project phases, 50 agent work notes, 150 live MCP memory operations
+- Tools used:
+  - `memory_remember`
+  - `memory_recall`
+  - `memory_search`
+
+This workload stores and retrieves actual project context from the Sibyl plugin during setup, integration, bounty review, fresh-clone verification, submission hardening, and ticket follow-up.
+
 ## Claim text
 
 ```text
@@ -38,4 +52,7 @@ https://github.com/marox-cyber/sibyl-b002-zo-codex
 
 Proof log:
 proof/early-user-150-requests-2026-07-06T071414Z.log
+
+Follow-up natural workload proof:
+proof/natural-agent-workload-2026-07-06T132810Z.log
 ```
