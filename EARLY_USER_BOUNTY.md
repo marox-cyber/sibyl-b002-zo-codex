@@ -39,4 +39,3 @@ https://github.com/marox-cyber/sibyl-b002-zo-codex
 Proof log:
 proof/early-user-150-requests-2026-07-06T071414Z.log
 ```
-
