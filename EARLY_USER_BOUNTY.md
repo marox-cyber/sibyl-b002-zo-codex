@@ -43,6 +43,23 @@ After rebinding the install with wallet sign-in, the early-user workload was run
   - `memory_recall`
   - `memory_search`
 
+## Email-auth rerun
+
+After switching the install back to email sign-in, the same setup checklist and early-user workload were run again:
+
+- Email-bound Sibyl account: `marenjeamar4734@gmail.com`
+- Log: `proof/email-natural-agent-workload-2026-07-08T163131Z.log`
+- Workload: 10 project phases, 50 agent work notes, 150 live MCP memory operations
+- Setup verified:
+  - `sibyl-memory-cli[mcp]` installed and current
+  - `sibyl health` all green
+  - Codex MCP config present
+  - Claude Code MCP config present
+- Tools used:
+  - `memory_remember`
+  - `memory_recall`
+  - `memory_search`
+
 ## Claim text
 
 ```text
@@ -70,4 +87,7 @@ proof/natural-agent-workload-2026-07-06T132810Z.log
 
 Wallet-auth rerun proof:
 proof/wallet-natural-agent-workload-2026-07-08T162348Z.log
+
+Email-auth rerun proof:
+proof/email-natural-agent-workload-2026-07-08T163131Z.log
 ```
