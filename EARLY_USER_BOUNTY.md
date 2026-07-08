@@ -31,6 +31,18 @@ After reviewer feedback that the proof should reflect real plugin usage instead 
 
 This workload stores and retrieves actual project context from the Sibyl plugin during setup, integration, bounty review, fresh-clone verification, submission hardening, and ticket follow-up.
 
+## Wallet-auth rerun
+
+After rebinding the install with wallet sign-in, the early-user workload was run again:
+
+- Wallet-bound Sibyl account: `0x9168209a217e20cb44fa9604e0691d9bc68477de`
+- Log: `proof/wallet-natural-agent-workload-2026-07-08T162348Z.log`
+- Workload: 10 project phases, 50 agent work notes, 150 live MCP memory operations
+- Tools used:
+  - `memory_remember`
+  - `memory_recall`
+  - `memory_search`
+
 ## Claim text
 
 ```text
@@ -55,4 +67,7 @@ proof/early-user-150-requests-2026-07-06T071414Z.log
 
 Follow-up natural workload proof:
 proof/natural-agent-workload-2026-07-06T132810Z.log
+
+Wallet-auth rerun proof:
+proof/wallet-natural-agent-workload-2026-07-08T162348Z.log
 ```
